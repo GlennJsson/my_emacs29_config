@@ -7,7 +7,7 @@ Embedded environment: IDF ESP32, STM32.
 
 ### Emacs version 29
 Package installer: ELPA/MELPA.  
-Installed packages:  
+Installed packages:
 - magit
 - company
 - yasnippet
@@ -18,7 +18,7 @@ Installed packages:
 - emmet-mode
 - prettier
 
-Themes:  
+Themes:
 - dracula-theme
 - gruvbox-theme
 - material-theme
