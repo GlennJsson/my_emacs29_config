@@ -31,3 +31,7 @@ URL: https://pkg.go.dev/golang.org/x/tools/gopls
 URL: https://cs.opensource.google/go/x/tools/+/refs/tags/gopls/v0.15.3:gopls/doc/emacs.md  
 Set GOPATH in bash_profile, bashrc or zshrc.  
 
+### Python
+Install python and python-lsp-server.  
+On MAC: `brew install python-lsp-server`  
+

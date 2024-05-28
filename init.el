@@ -96,6 +96,11 @@
         (call-interactively 'eglot-code-action-organize-imports))
     nil t)
 
+;; eglot and python
+(use-package eglot
+    :ensure t
+    :defer t
+    :hook (python-mode . eglot-ensure))
 
 ;; web-mode
 (require 'web-mode)
