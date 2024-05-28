@@ -4,6 +4,7 @@ OS: Linux or MAC OS X.
 Editor: emacs  
 Languages: C/C++, Golang, Python, ZIG, HTML/Javascript/CSS/SASS.  
 Embedded environment: IDF ESP32, STM32.  
+Compilers: CLANG, GCC, zig compiler.  
 
 ### Emacs version 29
 Package installer: ELPA/MELPA.  
