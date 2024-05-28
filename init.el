@@ -102,6 +102,34 @@
     :defer t
     :hook (python-mode . eglot-ensure))
 
+;; C/C++
+(progn
+    (customize-set-variable 'eglot-autoshutdown t)
+    (customize-set-variable 'eglot-extend-to-xref t)
+    (customize-set-variable 'eglot-ignored-server-capabilities
+        (quote (:documentFormattingProvider :documentRangeFormattingProvider)))
+
+        (with-eval-after-load 'eglot
+        (setq completion-category-defaults nil)
+        (add-to-list 'eglot-server-programs
+            '(c++-mode c-mode 
+                 . ("clangd"
+                       "-j=4"
+                       "--malloc-trim"
+                       "--log=error"
+                       "--background-index"
+                       "--clang-tidy"
+                       "--cross-file-rename"
+                       "--completion-style=detailed"
+                       "--pch-storage=memory"
+                       "--header-insertion=never"
+                       "--header-insertion-decorators=0"))))
+
+	(add-hook 'c-mode-hook 'eglot-ensure)
+	(add-hook 'c++-mode-hook 'eglot-ensure)
+	(add-hook 'rustic-mode-hook 'eglot-ensure))
+
+
 ;; web-mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
