@@ -89,6 +89,7 @@
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;; misc
+;; absolute/relative linenumbers
 (setq display-line-numbers-type 'absolute)
 (global-display-line-numbers-mode)
 
