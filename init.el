@@ -74,7 +74,7 @@
 ;; Optional: load other packages before eglot to enable eglot integrations.
 (require 'company)
 (require 'yasnippet)
-
+(require 'zig-mode)
 (require 'go-mode)
 (require 'eglot)
 (add-hook 'go-mode-hook 'eglot-ensure)
@@ -101,6 +101,10 @@
     :ensure t
     :defer t
     :hook (python-mode . eglot-ensure))
+
+;; ZIG
+(add-hook 'zig-mode-hook 'eglot-ensure)
+(add-to-list 'eglot-server-programs '(zig-mode . ("zls")))
 
 ;; C/C++
 (progn
