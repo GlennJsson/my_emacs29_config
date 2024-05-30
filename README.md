@@ -30,13 +30,16 @@ Themes:
 Install go and gopls.  
 URL: https://pkg.go.dev/golang.org/x/tools/gopls  
 URL: https://cs.opensource.google/go/x/tools/+/refs/tags/gopls/v0.15.3:gopls/doc/emacs.md  
-GO111MODULE=on go install golang.org/x/tools/gopls@latest´  
+`GO111MODULE=on go install golang.org/x/tools/gopls@latest`  
 In bashrc or zshrc:
-´export GOPATH="$(go env GOPATH)"´  
-´export PATH="${PATH}:${GOPATH}/bin"'  
-
+`export GOPATH="$(go env GOPATH)"`  
+`export PATH="${PATH}:${GOPATH}/bin"`  
 
 ### Python
 Install python and python-lsp-server.  
 On MAC: `brew install python-lsp-server`  
+
+### C/C++ (clang/clangd)
+Install clang and clang tools extra (for clangd).
+`dnf install clang-tools-extra`  
 

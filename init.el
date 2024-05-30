@@ -11,10 +11,10 @@
 (menu-bar-mode -1)
 
 ;; disable toolbar on startup
-;;(tool-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; disable scrollbar on startup
-;;(scroll-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; set GNU style indenting for C
 (setq c-default-style "linux"
@@ -116,7 +116,7 @@
         (with-eval-after-load 'eglot
         (setq completion-category-defaults nil)
         (add-to-list 'eglot-server-programs
-            '(c++-mode c-mode 
+            '((c++-mode c-mode) 
                  . ("clangd"
                        "-j=4"
                        "--malloc-trim"
