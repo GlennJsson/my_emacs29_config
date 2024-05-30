@@ -30,7 +30,11 @@ Themes:
 Install go and gopls.  
 URL: https://pkg.go.dev/golang.org/x/tools/gopls  
 URL: https://cs.opensource.google/go/x/tools/+/refs/tags/gopls/v0.15.3:gopls/doc/emacs.md  
-Set GOPATH in bash_profile, bashrc or zshrc.  
+GO111MODULE=on go install golang.org/x/tools/gopls@latest´  
+In bashrc or zshrc:
+´export GOPATH="$(go env GOPATH)"´  
+´export PATH="${PATH}:${GOPATH}/bin"' 
+
 
 ### Python
 Install python and python-lsp-server.  
