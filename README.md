@@ -43,3 +43,12 @@ On MAC: `brew install python-lsp-server`
 Install clang and clang tools extra (for clangd).  
 `dnf install clang-tools-extra`  
 
+### ZIG and ZLS (LSP)
+Install ZIG.  
+`dnf install zig`  
+
+### HTML/Javascript/CSS/JSON
+Install vscode-langservers:  
+`npm i -g vscode-langservers-extracted`  
+
+

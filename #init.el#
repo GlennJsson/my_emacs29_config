@@ -163,9 +163,11 @@
 )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 (add-to-list 'eglot-server-programs '(js-mode . ("vscode-eslint-language-server" "--stdio")))
+
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2))) ;; indent 2 spaces.
-
+(add-to-list 'emmet-jsx-major-modes 'your-jsx-major-mode)
 
 ;; misc
 ;; absolute/relative linenumbers
