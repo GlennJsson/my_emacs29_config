@@ -33,7 +33,7 @@ URL: https://cs.opensource.google/go/x/tools/+/refs/tags/gopls/v0.15.3:gopls/doc
 GO111MODULE=on go install golang.org/x/tools/gopls@latest´  
 In bashrc or zshrc:
 ´export GOPATH="$(go env GOPATH)"´  
-´export PATH="${PATH}:${GOPATH}/bin"' 
+´export PATH="${PATH}:${GOPATH}/bin"'  
 
 
 ### Python
