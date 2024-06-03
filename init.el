@@ -24,7 +24,7 @@
 (electric-pair-mode 1)
 
 ;; set transparency
-(add-to-list 'default-frame-alist '(alpha-background . 90))
+(add-to-list 'default-frame-alist '(alpha-background . 98))
 
 (require 'package)
 (package-initialize)
