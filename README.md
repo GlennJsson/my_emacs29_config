@@ -25,6 +25,10 @@ Themes:
 - gruvbox-theme
 - material-theme
 - atom-one-dark-theme
+
+### On first startup
+Run `M-x package-refresh-contents`  
+Run `M-x package-install-selected-packages`  
   
 ### Golang
 Install go and gopls.  
