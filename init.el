@@ -16,6 +16,15 @@
 ;; disable scrollbar on startup
 (scroll-bar-mode -1)
 
+;; Set transient mark mode
+(transient-mark-mode 1)
+
+;; Enable ORG mode
+(require 'org)
+
+;; Elixir mode
+(require 'elixir-mode)
+
 ;; set GNU style indenting for C
 (setq c-default-style "linux"
       c-basic-offset 2)
@@ -36,7 +45,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(magit company yasnippet go-mode dracula-theme gruvbox-theme material-theme atom-one-dark-theme prettier web-mode markdown-mode js2-mode emmet-mode)))
+   '(erlang-mode elixir-mode magit company yasnippet go-mode dracula-theme gruvbox-theme material-theme atom-one-dark-theme prettier web-mode markdown-mode js2-mode emmet-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -105,6 +114,14 @@
 ;; ZIG
 (add-hook 'zig-mode-hook 'eglot-ensure)
 (add-to-list 'eglot-server-programs '(zig-mode . ("zls")))
+
+;; Elixir
+;; This is optional. It automatically runs `M-x eglot` for you whenever you are in `elixir-mode`:
+(add-hook 'elixir-mode-hook 'eglot-ensure)
+
+;; Be sure to edit the path appropriately; use the `.bat` script instead for Windows:
+(add-to-list 'eglot-server-programs '(elixir-mode "/home/glenn/.config/elixir-lsp/language_server.sh"))
+
 
 ;; C/C++
 (progn
